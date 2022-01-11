@@ -1,0 +1,28 @@
+---
+title: "[Museroom] You have new sign up using your referral code."
+preheader: "Gabriel, someone has sign up using your referral code."
+bodyClass: bg-gray-100
+recipientName: Gabriel
+senderName: Jeff
+---
+
+<extends src="src/layouts/museroom.html">
+  <block name="museroom">
+    <div>
+      <p class="font-semibold">Hi, {{{page.recipientName}}} 👋,</p>
+      <p>
+        {{{page.senderName}}} has signed up on Museroom using your referral
+        code.
+      </p>
+    </div>
+
+    <div>
+      <p>Click the button below to checkout their profile.</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <span>Profile</span>
+        </component>
+      </div>
+    </div>
+  </block>
+</extends>

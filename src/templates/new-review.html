@@ -1,0 +1,39 @@
+---
+title: "[Museroom] You have new review."
+preheader: "Gabriel, you have new review from Jeff."
+bodyClass: bg-gray-100
+recipientName: Gabriel
+senderName: Jeff
+---
+
+<extends src="src/layouts/museroom.html">
+  <block name="museroom">
+    <div>
+      <p class="font-semibold">Hi, {{{page.recipientName}}} 👋,</p>
+      <p>{{{page.senderName}}} left you a review.</p>
+    </div>
+
+    <div>
+      <p>Click the button below to view their profile...</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <span>Profile</span>
+        </component>
+      </div>
+    </div>
+
+    <div>
+      <p>...or check out all the review you received.</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <a
+            href="https://staging.museroom.co/u/Skilledd/review"
+            class="text-white no-underline"
+          >
+            <span>Review</span>
+          </a>
+        </component>
+      </div>
+    </div>
+  </block>
+</extends>

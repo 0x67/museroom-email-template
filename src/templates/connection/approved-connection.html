@@ -1,0 +1,25 @@
+---
+title: "[Museroom] Your connection request has been accepted."
+preheader: "Gabriel, your connection request has been accepted by Jeff."
+bodyClass: bg-gray-100
+recipientName: Gabriel
+senderName: Jeff
+---
+
+<extends src="src/layouts/museroom.html">
+  <block name="museroom">
+    <div>
+      <p class="font-semibold">Hi, {{{page.recipientName}}} 👋,</p>
+      <p>{{{page.senderName}}} has accepted your connection request.</p>
+    </div>
+
+    <div>
+      <p>Click the button below to view their profile.</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <span>Profile</span>
+        </component>
+      </div>
+    </div>
+  </block>
+</extends>

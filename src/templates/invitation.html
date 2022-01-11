@@ -1,0 +1,25 @@
+---
+title: "[Museroom] You have new invitation."
+preheader: "Gabriel, you have new invitation from Jeff."
+bodyClass: bg-gray-100
+recipientName: Gabriel
+senderName: Jeff
+---
+
+<extends src="src/layouts/museroom.html">
+  <block name="museroom">
+    <div>
+      <p class="font-semibold">Hi, {{{page.recipientName}}} 👋,</p>
+      <p>{{{page.senderName}}} has invited you to join Museroom.</p>
+    </div>
+
+    <div>
+      <p>Click the button below to complete your registration process.</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <span>Sign Up</span>
+        </component>
+      </div>
+    </div>
+  </block>
+</extends>

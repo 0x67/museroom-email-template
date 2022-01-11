@@ -1,0 +1,45 @@
+---
+title: "[Museroom] You have new connection request."
+preheader: "Gabriel, you have new connection request from Jeff."
+bodyClass: bg-gray-100
+recipientName: Gabriel
+senderName: Jeff
+profileUrl: https://staging.museroom.co/u/Skilledd
+notificationUrl: https://staging.museroom.co/notifications
+---
+
+<extends src="src/layouts/museroom.html">
+  <block name="museroom">
+    <div>
+      <p class="font-semibold">Hi, {{{page.recipientName}}} 👋,</p>
+      <p>You have a new connection request from {{{page.senderName}}}.</p>
+    </div>
+
+    <div>
+      <p>Click the button below to view their profile...</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <a
+            href="https://staging.museroom.co/u/Skilledd/review"
+            class="text-white no-underline"
+          >
+            <span>Profile</span>
+          </a>
+        </component>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        ...or go to your notification page to reply to {{{page.senderName}}}.
+      </p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <a href="{{{page.notificationUrl}}}" class="text-white no-underline">
+            <span>Notification</span>
+          </a>
+        </component>
+      </div>
+    </div>
+  </block>
+</extends>

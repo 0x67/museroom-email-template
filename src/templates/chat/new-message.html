@@ -1,0 +1,34 @@
+---
+title: "[Museroom] You have new message."
+preheader: "Gabriel, you have a new message from Jeff."
+bodyClass: bg-gray-100
+recipientName: Gabriel
+senderName: Jeff
+---
+
+<extends src="src/layouts/museroom.html">
+  <block name="museroom">
+    <div>
+      <p class="font-semibold">Hi, {{{page.recipientName}}} 👋,</p>
+      <p>{{{page.senderName}}} has sent you a message.</p>
+    </div>
+
+    <div>
+      <p>Click the button below to view their profile...</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <span>Profile</span>
+        </component>
+      </div>
+    </div>
+
+    <div>
+      <p>...or go to your chatroom page to reply to {{{page.senderName}}}.</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <span>Notifications</span>
+        </component>
+      </div>
+    </div>
+  </block>
+</extends>

@@ -1,0 +1,37 @@
+---
+title: "[Museroom] A new chatroom has been created."
+preheader: "Gabriel, start chatting with Jeff."
+bodyClass: bg-gray-100
+recipientName: Gabriel
+senderName: Jeff
+---
+
+<extends src="src/layouts/museroom.html">
+  <block name="museroom">
+    <div>
+      <p class="font-semibold">Hi, {{{page.recipientName}}} 👋,</p>
+      <p>You have a new chatroom created from {{{page.senderName}}}.</p>
+    </div>
+
+    <div>
+      <p>Click the button below to view their profile...</p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <span>Profile</span>
+        </component>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        ...or go to your chatroom page to start chatting with
+        {{{page.senderName}}}
+      </p>
+      <div class="leading-full">
+        <component src="src/components/button.html">
+          <span>Chatroom</span>
+        </component>
+      </div>
+    </div>
+  </block>
+</extends>
